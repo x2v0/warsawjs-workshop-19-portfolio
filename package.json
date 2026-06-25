@@ -3,6 +3,7 @@
     "name": "warsawjs-workshop-19-portfolio",
     "description": "Aplikacja stworzona na potrzeby WarsawJS Workshop #19",
     "version": "1.0.0",
+    "license": "MIT",
     "dependencies": {},
     "devDependencies": {},
     "repository": {
