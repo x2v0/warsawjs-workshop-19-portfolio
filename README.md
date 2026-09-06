@@ -1,6 +1,6 @@
 # warsawjs-workshop-19-portfolio
 
-⛩️ WarsawJS Workshop #19 — Front-end
+⛩️ Test 
 
 ## Preview 🎉
 
