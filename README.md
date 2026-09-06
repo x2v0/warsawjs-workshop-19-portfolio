@@ -4,15 +4,15 @@
 
 ## Preview 🎉
 
-<https://piecioshka.github.io/warsawjs-workshop-19-portfolio/app/>
+<https://x2v0.github.io/warsawjs-workshop-19-portfolio/app/>
 
 ## Deployment 🚀
 
 ### GitHub Pages
 
-1. Wejdź do `Settings` (projektu)
-2. Przeskroluj do sekcji `GitHub Pages`
-3. `Source` wybierz brancha `master`
+1. do `Settings` (projektu)
+2. `GitHub Pages`
+3. `Source` - `master`
     + pojawi się link do strony
 
 Link nie wyświetla Twojego projektu?
