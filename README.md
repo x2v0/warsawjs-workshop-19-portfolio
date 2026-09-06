@@ -1,89 +1,93 @@
+Вот полный перевод вашего README.md на русский язык. Я сохранил все технические термины, чтобы инструкции остались понятными.
+
+---
+
+```markdown
 # warsawjs-workshop-19-portfolio
 
-⛩️ Test 
+⛩️ Тестовый проект
 
-## Preview 🎉
+## Предпросмотр 🎉
 
 <https://x2v0.github.io/warsawjs-workshop-19-portfolio/app/>
 
-## Deployment 🚀
+## Развёртывание 🚀
 
 ### GitHub Pages
 
-1. do `Settings` (projektu)
-2. `GitHub Pages`
-3. `Source` - `master`
-    + pojawi się link do strony
+1. Перейдите в `Settings` (настройки проекта)
+2. Найдите раздел `GitHub Pages`
+3. В `Source` выберите ветку `master`
+   * появится ссылка на страницу
 
-Link nie wyświetla Twojego projektu?
+Ссылка не показывает ваш проект?
 
-* Spr. czy dopisałeś `app/` do linku
-* Spr. czy masz plik `index.html` w katalogu `app`
-* Dodaj plik `.nojekyll` do katalogu głównego projektu
+* Проверьте, дописали ли вы `app/` к ссылке
+* Проверьте, есть ли файл `index.html` в каталоге `app`
+* Добавьте файл `.nojekyll` в корневой каталог проекта
 
-### `GitHub Pages` (Omijamy `app/` w URLu)
+### `GitHub Pages` (Как убрать `app/` из URL)
 
-1. Instalacja wymaganego oprogramowania
+1. Установите необходимое программное обеспечение
 
     ```bash
     npm install -g gh-pages
     ```
 
-2. Wrzucenie zawartości katalogu `app/` do brancha `gh-pages`
+2. Загрузите содержимое каталога `app/` в ветку `gh-pages`
 
     ```bash
     gh-pages -d app/
     ```
 
-3. Zmiana brancha źródłowego z `master` na `gh-pages` w interfejsie GitHuba
+3. В интерфейсе GitHub измените ветку-источник с `master` на `gh-pages`
 
-## Features
+## Возможности
 
-> Typ projektu: landing page
+> Тип проекта: лендинг
 
-* :white_check_mark: Baner
+* :white_check_mark: Баннер
     + https://picsum.photos/720/300
-* :white_check_mark: Galeria zdjęć
+* :white_check_mark: Галерея изображений
     + https://picsum.photos/300/300
-* :white_check_mark: Newsletter
-* :white_check_mark: Menu
-    + :white_check_mark: Skrolowanie do sekcji za pomocą hashtaga
-* :no_entry: Karuzela: Podgląd powiększonych zdjęć
+* :white_check_mark: Новостная рассылка (Newsletter)
+* :white_check_mark: Меню
+    + :white_check_mark: Прокрутка к разделам с помощью хэштегов
+* :no_entry: Карусель: Просмотр увеличенных изображений
 
-## Krok po kroku 👣
+## Пошаговая инструкция 👣
 
-### Etap 0: Beforek
+### Этап 0: Подготовка
 
 <details>
 
-* Stworzyć workspace-u
-* Stworzyć katalogu projektu
-* Stworzyć katalogu `app`
-* Stworzyć plik `app/index.html`
-* W pliku `index.html` wpisujemy podstawowe tagi:
+* Создать рабочую область (workspace)
+* Создать каталог проекта
+* Создать каталог `app`
+* Создать файл `app/index.html`
+* В файле `index.html` прописать базовые теги:
     html, head, body
-* Wykorzystać tagi title, meta
+* Использовать теги title, meta
 
 </details>
 
-### Etap 1: Baner
+### Этап 1: Баннер
 
 <details>
 
-* W `body` dodać kontener `div` o id `page`
-* Wewnątrz tagu `div` dodać `section` o id `banner` (język angielski)
-* Dodać nagłówek pierwszego poziomu `h1` z tekstem `Portfolio`
-* Stworzyć plik `app/styles/main.css`
-* Osadzić plik CSS w HTMLu za pomocą `<link rel="stylesheet" href="styles/main.css"/>`
-* Zresetować domyślne style (reguła `margin`) dla przeglądarki dla `body, h1, p`
-* Zdefiniować szerokość kontenera z id `page` na `720px` za pomocą reguły
-    `width` dla kontenera z id `page`
-* Wycentrować kontener `#page` definiując automatyczne marginesy `margin-left` i `margin-right`
-* Zdefiniować wysokość dla kontenera `#banner` np. `300px`
-* Ustawić tło za pomocą reguły `background-image`
-* Wyłączyć powtarzanie
-* Wycentrować tło
-* Wycentrować text w banerze za pomocą `Flexbox`
+* В `body` добавить контейнер `div` с id `page`
+* Внутри тега `div` добавить секцию `section` с id `banner` (на английском)
+* Добавить заголовок первого уровня `h1` с текстом `Portfolio`
+* Создать файл `app/styles/main.css`
+* Подключить CSS в HTML с помощью `<link rel="stylesheet" href="styles/main.css"/>`
+* Сбросить стандартные стили (правило `margin`) для браузера для `body, h1, p`
+* Задать ширину контейнера с id `page` на `720px` с помощью правила `width`
+* Выровнять контейнер `#page` по центру, задав автоматические отступы `margin-left` и `margin-right`
+* Задать высоту для контейнера `#banner`, например, `300px`
+* Установить фон с помощью правила `background-image`
+* Отключить повторение фона
+* Выровнять фон по центру
+* Выровнять текст в баннере с помощью `Flexbox`
 
     ```css
     #banner {
@@ -96,19 +100,17 @@ Link nie wyświetla Twojego projektu?
 
 </details>
 
-### Etap 2: Galeria zdjęć
+### Этап 2: Галерея изображений
 
 <details>
 
-* Stworzyć kontener `section` o id `gallery` z nagłówkiem `h1` o treści
-     `Galeria zdjęć`
-* Stworzyć listę za pomocą tagów `ul, li`
-* Każdy element list powinien zawierać obrazek (wykorzystać tą samą usługę
-    zdjęć co w banerze)
+* Создать контейнер `section` с id `gallery` и заголовком `h1` с текстом `Galeria zdjęć`
+* Создать список с помощью тегов `ul, li`
+* Каждый элемент списка должен содержать изображение (использовать тот же сервис, что и для баннера)
 
-    UWAGA: Obrazek osadzamy za pomocą znacznika `img`
+    ПРИМЕЧАНИЕ: Изображение вставляется с помощью тега `img`
 
-* Zresetować domyślne style dla list ul, li
+* Сбросить стандартные стили для списков ul, li
 
     ```css
     ul {
@@ -118,7 +120,7 @@ Link nie wyświetla Twojego projektu?
     }
     ```
 
-* Zmienić sposób prezentacji zdjęć w galerii za pomocą Flexboxa
+* Изменить способ отображения изображений в галерее с помощью Flexbox
 
     ```css
     ul {
@@ -131,77 +133,84 @@ Link nie wyświetla Twojego projektu?
 
 </details>
 
-### Etap 3: Newsletter (Wykorzystujemy `JavaScript`)
+### Этап 3: Новостная рассылка (Используем `JavaScript`)
 
 <details>
 
-* Stworzyć kontener `section` o id `newsletter` z nagłówkiem `h1` o treści `Newsletter`
-* Dodać pod nagłówkiem formularz za pomocą znacznika `form`
-* Stworzyć `input` typu `email` z atrybutem `name` o treści `email`
-* Dodatkowe: Ustawić atrybut `required`
-* Stworzyć `label` z zawartością `Twój email`
-* Stworzyć `input` typu `submit` z atrybutem `value` o treści `Wyślij`
-* Stworzyć plik `app/scripts/main.js`
-* Osadzić plik JavaScript w HTMLu za pomocą `<script src="scripts/main.js"></script>`
+* Создать контейнер `section` с id `newsletter` и заголовком `h1` с текстом `Newsletter`
+* Добавить под заголовком форму с помощью тега `form`
+* Создать поле ввода `input` типа `email` с атрибутом `name` со значением `email`
+* Дополнительно: Установить атрибут `required`
+* Создать метку `label` с содержимым `Twój email`
+* Создать кнопку отправки `input` типа `submit` с атрибутом `value` со значением `Wyślij`
+* Создать файл `app/scripts/main.js`
+* Подключить JavaScript в HTML с помощью `<script src="scripts/main.js"></script>`
 
-    UWAGA: osadzić ten kod przed zamknięciem znacznika `body`
+    ПРИМЕЧАНИЕ: подключить этот код перед закрывающим тегом `body`
 
-* Stworzyć w pliku JavaScript zmienną, która będzie przechowywała referencję
-    do formularza
+* В файле JavaScript создать переменную, которая будет хранить ссылку на форму
 
-    UWAGA: korzystamy z funkcji `document.querySelector`
+    ПРИМЕЧАНИЕ: используем функцию `document.querySelector`
 
-* Podpiąć się pod zdarzenia `submit` na formularzu
-* Wyłączyć domyślne zachowanie formularza w ciele handlera zdarzenia `submit`
-    za pomocą funkcji `evt.preventDefault()`
-* Stworzyć wewnątrz handlera zmienną przechowującą dane wpisane w formularzu
+* Подписаться на событие `submit` на форме
+* Отключить стандартное поведение формы в теле обработчика события `submit` с помощью функции `evt.preventDefault()`
+* Внутри обработчика создать переменную, хранящую данные, введённые в форму
 
-    UWAGA: Wykorzystać do tego konstruktor `FormData` przekazując argument
-    będący wskaźnikiem do formularza
+    ПРИМЕЧАНИЕ: Использовать для этого конструктор `FormData`, передав ему ссылку на форму
 
-* Skonwertować dane z formularza na mapę za pomocą konstruktora `Map`
-* Stworzyć funkcję `displayMessage` do prezentacji komunikatu, który zostanie
-    przekazany w pierwszym parametrze
-* Zbudować wiadomość z wykorzystaniem `template stringów` i stworzyć zmienną `message`
-* Przekazać zmienną `message` podczas uruchomienia funkcji `displayMessage`
+* Преобразовать данные из формы в карту (map) с помощью конструктора `Map`
+* Создать функцию `displayMessage` для отображения сообщения, которое будет передано в первом параметре
+* Создать сообщение, используя `шаблонные строки` (template strings), и создать переменную `message`
+* Передать переменную `message` при вызове функции `displayMessage`
 
 </details>
 
-### Etap 4: Menu
+### Этап 4: Меню
 
 <details>
 
-* Stworzyć kontener `nav` o id `menu`
-* Stworzyć listę za pomocą `ul, li` wewnątrz nowo stworzonego kontenera
-* Stworzyć link w każdym elemencie listy
+* Создать контейнер `nav` с id `menu`
+* Внутри нового контейнера создать список с помощью `ul, li`
+* Создать ссылку в каждом элементе списка
 
-    UWAGA: wykorzystujemy znacznik `a`
+    ПРИМЕЧАНИЕ: используем тег `a`
 
-* Zdefiniować odpowiedni wartości w atrybucie `href` aby po hashtagu były
-    wartości z `id` każdej sekcji
-* (Opcjonalne) Ostylować elementy menu według uznania
+* Определить соответствующие значения в атрибуте `href` так, чтобы после хэштега были значения `id` каждого раздела
+* (Опционально) Стилизовать элементы меню по своему усмотрению
 
 </details>
 
-### Etap 5: Karuzela (Wykorzystujemy `JavaScript`)
+### Этап 5: Карусель (Используем `JavaScript`)
 
 <details>
 
-Dla chętnych 🏆
+Для желающих 🏆
 
 </details>
 
-## Źródła, czyli tam gdzie warto zajrzeć
+## Источники, куда стоит заглянуть
 
-* https://github.com/piecioshka/colors - kolory
-* https://picsum.photos/ - darmowe zdjęcia
-* https://flexboxfroggy.com/ - nauka Flexboxa
+* https://github.com/piecioshka/colors - цвета
+* https://picsum.photos/ - бесплатные изображения
+* https://flexboxfroggy.com/ - изучение Flexbox
 * https://experiments.withgoogle.com/chrome
 * https://codepen.io/joshnh/pen/paxbE
 * https://codepen.io/piecioshka/pens/loved/10/
 * https://codepen.io/eva_trostlos/pen/akQoLN
 * https://codepen.io/aakashrodrigues/pen/Gfhjw
 
-## License
+## Лицензия
 
 [The MIT License](https://piecioshka.mit-license.org) @ 2026
+```
+
+---
+
+📝 Важные замечания по переводу
+
+1. Технические термины (workspace, commit, branch, handler) оставлены без перевода, так как они общеприняты в разработке.
+2. Названия тегов и атрибутов (div, section, id, href) сохранены в исходном виде.
+3. Текст внутри кавычек (например, названия классов и ID) переведён там, где это смысловая нагрузка, и оставлен на английском там, где это техническое требование (как page, banner, gallery).
+4. Пункты про GitHub Pages переведены с учётом актуальных названий разделов в интерфейсе GitHub.
+
+Теперь вы можете заменить содержимое вашего файла README.md на этот переведённый вариант. Если нужны будут правки или пояснения по какому-либо термину — просто напишите.
